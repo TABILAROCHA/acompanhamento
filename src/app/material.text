@@ -1,0 +1,37 @@
+<div class="row">
+  <div class="col">
+    <div ngbDropdown class="d-inline-block">
+      <button class="btn btn-outline-primary" id="dropdownBasic1" ngbDropdownToggle>Selecione/button>
+      <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+        <button ngbDropdownItem>Número do Sinistro</button>
+        <button ngbDropdownItem>CPF/CNPJ</button>
+        <button ngbDropdownItem>Placa</button>
+      </div>
+    </div>
+  </div>
+
+<p>Table is just a mapping of objects to table rows with <code>ngFor</code></p>
+
+<table class="table table-striped">
+  <thead>
+  <tr>
+    <th scope="col">#</th>
+    <th scope="col">ABERTURA DE SINISTRO</th>
+    <th scope="col">NOME</th>
+    <th scope="col">TIPO</th>
+    <th scope="col">NÚMERO DO SINISTRO</th>
+    <th scope="col">TIPO DO EVENTO</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let country of countries; index as i">
+    <th scope="row">{{ i + 1 }}</th>
+
+    <td>{{ aberturadesinistro.nome | number }}</td>
+    <td>{{ aberturadesinistro.tipo | number }}</td>
+    <td>{{ aberturadesinistro.numerodosinistro | number }}</td>
+    <td>{{ aberturadesinistro.tipodoevento | number }}</td>
+
+  </tr>
+  </tbody>
+</table>
